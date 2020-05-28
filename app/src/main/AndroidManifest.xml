@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ke6.empire">
+
+    <application
+        android:name=".App"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="UnusedAttribute">
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--新快SDK AppId-->
+        <meta-data
+            android:name="XK_APP_ID"
+            android:value="${XK_APP_ID}" />
+
+        <!--新快SDK AppKey-->
+        <meta-data
+            android:name="XK_APP_KEY"
+            android:value="${XK_APP_KEY}" />
+
+        <!--Facebook AppId-->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="${FACEBOOK_APP_ID}" />
+
+        <!--KaKao AppKey-->
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="029ee94cfbc77013261c0372f3a38b89" />
+
+        <!--Naver AppId-->
+        <!--<meta-data
+            android:name="NAVER_APP_ID"
+            android:value="iz5DP_7Z4hIhixGdUm7P" />-->
+        <!--Naver AppKey-->
+        <!--<meta-data
+            android:name="NAVER_APP_KEY"
+            android:value="IsM6dXMmyn" />-->
+
+        <!--AppsFlyer DevKey-->
+        <!--<meta-data
+            android:name="AF_DEV_KEY"
+            android:value="${AF_DEV_KEY}" />-->
+
+        <!--Facebook 分享配置-->
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider${FACEBOOK_APP_ID}"
+            android:exported="true" />
+
+    </application>
+
+</manifest>

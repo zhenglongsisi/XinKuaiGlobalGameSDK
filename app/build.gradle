@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.ke6.empire"
+        minSdkVersion 16
+        targetSdkVersion 28 //not support 29
+        versionCode 1
+        versionName "1.0.0"
+
+        manifestPlaceholders = [
+                XK_APP_ID      : "9",
+                XK_APP_KEY     : "4is5mo1segzls8xv1t3daaqgzcv58jz2",
+                FACEBOOK_APP_ID: "fb381226635885383",
+                AF_DEV_KEY     : "MzGqCwqP3vd3fWgTjH28hH"
+        ]
+
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('../xinyou.jks')
+            storePassword "xinyou"
+            keyAlias "xinyou"
+            keyPassword "xinyou"
+            v2SigningEnabled false
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.release
+        }
+
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        android.applicationVariants.all { variant ->
+            variant.outputs.all {
+                outputFileName = "新游海外版SDK示例.apk"
+            }
+        }
+
+    }
+
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'com.xinkuai.globalsdk:gamesdk-kr:1.1.2'
+
+}
