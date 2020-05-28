@@ -1,4 +1,4 @@
-package com.ke6.empire;
+package com.xinkuai.globalsdk.example;
 
 import android.app.Application;
 import android.content.Context;

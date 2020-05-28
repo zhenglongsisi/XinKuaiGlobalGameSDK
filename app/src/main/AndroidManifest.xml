@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.ke6.empire">
+    package="com.xinkuai.globalsdk.example">
 
     <application
-        android:name=".App"
+        android:name="com.xinkuai.globalsdk.example.App"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -12,7 +12,7 @@
         android:usesCleartextTraffic="true"
         tools:ignore="UnusedAttribute">
 
-        <activity android:name=".MainActivity">
+        <activity android:name="com.xinkuai.globalsdk.example.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -57,7 +57,7 @@
         <!--Facebook 分享配置-->
         <provider
             android:name="com.facebook.FacebookContentProvider"
-            android:authorities="com.facebook.app.FacebookContentProvider${FACEBOOK_APP_ID}"
+            android:authorities="com.facebook.app.FacebookContentProviderfb381226635885383"
             android:exported="true" />
 
     </application>
