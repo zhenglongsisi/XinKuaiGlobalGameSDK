@@ -20,10 +20,12 @@ android {
 
     signingConfigs {
         release {
+            Properties properties = new Properties()
+            properties.load(project.rootProject.file('local.properties').newDataInputStream())
             storeFile file('../xinyou.jks')
-            storePassword "xinyou"
-            keyAlias "xinyou"
-            keyPassword "xinyou"
+            storePassword properties.getProperty('signing.password')
+            keyAlias properties.getProperty('signing.password')
+            keyPassword properties.getProperty('signing.password')
             v2SigningEnabled false
         }
     }
