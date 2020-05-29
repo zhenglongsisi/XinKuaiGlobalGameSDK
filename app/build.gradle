@@ -26,7 +26,6 @@ android {
             storePassword properties.getProperty('signing.password')
             keyAlias properties.getProperty('signing.password')
             keyPassword properties.getProperty('signing.password')
-            v2SigningEnabled false
         }
     }
 
@@ -54,7 +53,6 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    implementation 'com.xinkuai.globalsdk:gamesdk-kr:1.1.2'
-
+    //新快海外版SDK依赖
+    implementation 'com.xinkuai.globalsdk:gamesdk-kr:1.2.0'
 }

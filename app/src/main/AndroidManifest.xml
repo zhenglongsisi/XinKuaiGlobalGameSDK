@@ -57,7 +57,7 @@
         <!--Facebook 分享配置-->
         <provider
             android:name="com.facebook.FacebookContentProvider"
-            android:authorities="com.facebook.app.FacebookContentProviderfb381226635885383"
+            android:authorities="com.facebook.app.FacebookContentProvider381226635885383"
             android:exported="true" />
 
     </application>
