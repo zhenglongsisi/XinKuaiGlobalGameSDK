@@ -42,7 +42,7 @@ android {
 
         android.applicationVariants.all { variant ->
             variant.outputs.all {
-                outputFileName = "新游海外版SDK示例.apk"
+                outputFileName = "新快海外版SDK示例.apk"
             }
         }
 
@@ -54,5 +54,5 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     //新快海外版SDK依赖
-    implementation 'com.xinkuai.globalsdk:gamesdk-kr:1.2.0'
+    implementation 'com.xinkuai.globalsdk:gamesdk-kr:1.2.1'
 }
